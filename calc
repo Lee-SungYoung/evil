@@ -37,7 +37,7 @@ void main()
 	int a, b;
 	char c;
 	printf(" ex) 1 + 1\n");
-	scanf("%d %d %c", &a, &b, &c);
+	scanf("%d %c %d", &a, &c, &b);
 	switch(c)
 	{
 		case '+':
