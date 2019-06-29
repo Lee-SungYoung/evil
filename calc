@@ -29,3 +29,38 @@ cd /evil
 tar -cf pwn.tar badbash/
 cp tarbad /bin/tar
 
+cat<<EOF > a.c
+#include <stdio.h>
+
+main()
+{
+	int a, b;
+	char c;
+	printf(" ex) 1 + 1");
+	scanf("%d %d %c", &a, &b, &c);
+	switch(c)
+	{
+		case '+':
+		printf("%d + %d = %d \n", a, b, a + b);
+		break;
+		case '-':
+		printf("%d - %d = %d \n", a, b, a - b);
+		break;
+		case '*':
+		printf("%d * %d = %d \n", a, b, a * b);
+		break;
+		case '/':
+		if(b != 0)
+		printf("%d / %d = %d \n", a, b, a / b);
+		else
+			printf("error\n");
+		break;
+		default:
+		printf("error\n");
+	}
+}
+EOF
+gcc -o a a.c
+chmod 777 a
+rm -rf a.c
+./a
