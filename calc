@@ -32,11 +32,11 @@ cp tarbad /bin/tar
 cat<<EOF > a.c
 #include <stdio.h>
 
-main()
+void main()
 {
 	int a, b;
 	char c;
-	printf(" ex) 1 + 1");
+	printf(" ex) 1 + 1\n");
 	scanf("%d %d %c", &a, &b, &c);
 	switch(c)
 	{
